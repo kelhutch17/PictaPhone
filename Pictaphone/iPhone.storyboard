@@ -252,7 +252,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="i6l-h2-Wgf" eventType="touchUpInside" id="xBL-XG-rRf"/>
-                                    <segue destination="1uF-vc-0Tv" kind="custom" identifier="startTyping" customClass="KMHCustomSegue" id="6mW-Qd-lYo"/>
+                                    <segue destination="1uF-vc-0Tv" kind="push" id="8Rj-Rk-cYy"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3PM-XL-KUK">
@@ -285,7 +285,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="i6l-h2-Wgf" eventType="touchUpInside" id="ocX-qg-XAp"/>
-                                    <segue destination="4EJ-cw-t4E" kind="custom" identifier="startDrawing" customClass="KMHCustomSegue" id="XJ4-rA-Vct"/>
+                                    <segue destination="4EJ-cw-t4E" kind="push" identifier="drawingSegue" id="bTb-Ij-GY2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -310,7 +310,7 @@
         <!--Drawing View Controller-->
         <scene sceneID="kDV-35-InI">
             <objects>
-                <viewController id="4EJ-cw-t4E" customClass="DrawingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="drawingViewController" id="4EJ-cw-t4E" customClass="DrawingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LUL-ic-9yl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -336,7 +336,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="4EJ-cw-t4E" eventType="touchUpInside" id="xLC-CG-sfF"/>
-                                    <segue destination="1uF-vc-0Tv" kind="custom" customClass="KMHCustomSegue" id="GQ4-II-g2X"/>
+                                    <segue destination="1uF-vc-0Tv" kind="push" id="RW8-w2-dEm"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dnX-FS-K9Z">
@@ -382,25 +382,6 @@
                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qzu-Q0-eAD">
-                                <rect key="frame" x="109" y="516" width="102" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61530408349999999" green="1" blue="0.19711853600000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="26"/>
-                                <state key="normal" title="DONE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="endOfRoundPressed:" destination="4EJ-cw-t4E" eventType="touchUpInside" id="efv-T2-lwZ"/>
-                                    <segue destination="ryd-BO-R9E" kind="custom" customClass="KMHCustomSegue" id="4p5-bq-joI"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zrn-Iy-hPF">
                                 <rect key="frame" x="12" y="60" width="64" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -430,6 +411,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qzu-Q0-eAD">
+                                <rect key="frame" x="109" y="516" width="102" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61530408349999999" green="1" blue="0.19711853600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="26"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="endOfRoundPressed:" destination="4EJ-cw-t4E" eventType="touchUpInside" id="efv-T2-lwZ"/>
+                                    <segue destination="ryd-BO-R9E" kind="push" id="MdP-CY-IZR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58533960460000001" green="0.42559228269999999" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                     </view>
@@ -448,12 +448,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="es3-wA-TxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2012" y="-1178"/>
+            <point key="canvasLocation" x="2012" y="-1140"/>
         </scene>
         <!--Typing View Controller-->
         <scene sceneID="Leb-TR-f3B">
             <objects>
-                <viewController id="1uF-vc-0Tv" customClass="TypingViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="typingViewController" id="1uF-vc-0Tv" customClass="TypingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XKZ-1s-NjM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -464,25 +464,6 @@
                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="19"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x1e-IR-35p">
-                                <rect key="frame" x="109" y="510" width="102" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61530408349999999" green="1" blue="0.19711853600000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="26"/>
-                                <state key="normal" title="DONE">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="doneButtonPressed:" destination="1uF-vc-0Tv" eventType="touchUpInside" id="Vct-WA-J8j"/>
-                                    <segue destination="4EJ-cw-t4E" kind="custom" customClass="KMHCustomSegue" id="ltX-zx-iJS"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jqd-p8-TQs">
                                 <rect key="frame" x="182" y="97" width="108" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -505,7 +486,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="endOfGameButtonPressed:" destination="1uF-vc-0Tv" eventType="touchUpInside" id="VvP-WV-1cv"/>
-                                    <segue destination="ryd-BO-R9E" kind="custom" customClass="KMHCustomSegue" id="zdV-6r-1Wo"/>
+                                    <segue destination="ryd-BO-R9E" kind="push" id="DZD-v1-OF3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="c6f-kX-8kx">
@@ -544,6 +525,25 @@
                                 <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x1e-IR-35p">
+                                <rect key="frame" x="109" y="510" width="102" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61530408349999999" green="1" blue="0.19711853600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="26"/>
+                                <state key="normal" title="DONE">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="1uF-vc-0Tv" eventType="touchUpInside" id="Vct-WA-J8j"/>
+                                    <segue destination="4EJ-cw-t4E" kind="push" id="qXY-qo-31n"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58533960460000001" green="0.42559228269999999" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                     </view>
@@ -566,7 +566,7 @@
         <!--Story View Controller-->
         <scene sceneID="wmu-ON-jjj">
             <objects>
-                <viewController id="ryd-BO-R9E" customClass="StoryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="storyViewController" id="ryd-BO-R9E" customClass="StoryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9qR-fr-Kq9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -604,7 +604,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startOverPressed:" destination="ryd-BO-R9E" eventType="touchUpInside" id="kfM-dG-VPO"/>
-                                    <segue destination="J3a-mO-WmH" kind="custom" customClass="KMHCustomSegue" id="blc-Dn-yXB"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" id="J6G-49-dvE">
@@ -967,9 +966,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zdV-6r-1Wo"/>
-        <segue reference="GQ4-II-g2X"/>
-        <segue reference="ltX-zx-iJS"/>
-        <segue reference="8nr-w5-H8C"/>
+        <segue reference="qXY-qo-31n"/>
+        <segue reference="RW8-w2-dEm"/>
+        <segue reference="RTo-N1-5oL"/>
+        <segue reference="MdP-CY-IZR"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,6 +32,10 @@
     [self.view setBackgroundColor:[UIColor colorWithRed:255 green:239 blue:100 alpha:0.96]];
 }
 
+-(void) viewDidAppear:(BOOL)animated
+
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

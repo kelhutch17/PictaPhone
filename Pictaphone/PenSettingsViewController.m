@@ -93,8 +93,7 @@
     switch (width) {
         case 5:
             self.thicknessSegmentOutlet.selectedSegmentIndex = 0;
-            break;
-        case 13:
+            break;         case 13:
             self.thicknessSegmentOutlet.selectedSegmentIndex = 1;
             break;
         case 20:

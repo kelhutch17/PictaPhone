@@ -7,6 +7,8 @@
 //
 
 #import "DrawingViewController.h"
+#import "StoryViewController.h"
+#import "TypingViewController.h"
 #import "PenSettingsViewController.h"
 #import "ConfirmationViewController.h"
 #import "ViewLastTurnViewController.h"
@@ -74,6 +76,8 @@ CGPoint currentPoint;
     // Do any additional setup after loading the view.
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor colorWithWhite:5.0 alpha:0.95];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
     
     if(!self.autoGenerate)
     {
@@ -419,7 +423,7 @@ CGPoint currentPoint;
         };
         
     }
-    
+    // erase current drawing view
     else if([segue.identifier isEqualToString:@"confirmErase"])
     {
         ConfirmationViewController *confirmEraseViewController = segue.destinationViewController;
@@ -430,6 +434,7 @@ CGPoint currentPoint;
         };
     }
     
+    // previous turn phrase
     else if ([segue.identifier isEqualToString:@"lastTurn"])
     {
         ViewLastTurnViewController *lastTurnVC = segue.destinationViewController;
@@ -453,12 +458,16 @@ CGPoint currentPoint;
     }
     
 }
+
+// Game Over
 - (IBAction)endOfRoundPressed:(id)sender {
     UIImage *drawing = [self imageWithView:self.drawingView];
     
     [self.model trackFinishedTurn];
     [self.model populateContentsArrayWithImage:drawing];
 }
+
+// Go to Typing view controller
 - (IBAction)doneButtonPressed:(id)sender {
     
     UIImage *drawing = [self imageWithView:self.drawingView];

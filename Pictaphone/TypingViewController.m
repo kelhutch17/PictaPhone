@@ -7,6 +7,8 @@
 //
 
 #import "TypingViewController.h"
+#import "DrawingViewController.h"
+#import "StoryViewController.h"
 #import "ViewLastTurnViewController.h"
 #import "model.h"
 
@@ -49,8 +51,11 @@
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor colorWithWhite:5.0 alpha:0.95];
     
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
     self.typingTextView.layer.borderWidth = 5.0f;
     self.typingTextView.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.typingTextView.hidden = NO;
     
     self.typingTextView.delegate = self;
     [self.typingTextView resignFirstResponder];
@@ -171,8 +176,8 @@
         [self.viewLastTurnButton setImage:self.lastRoundImage forState:UIControlStateNormal];
     }
     
-    self.self.viewLastTurnButton.layer.borderWidth = 5.0f;
-    self.self.viewLastTurnButton.layer.borderColor = [[UIColor grayColor] CGColor];
+    self.viewLastTurnButton.layer.borderWidth = 5.0f;
+    self.viewLastTurnButton.layer.borderColor = [[UIColor grayColor] CGColor];
     [self.viewLastTurnButton setContentMode:UIViewContentModeRedraw];
 }
 
@@ -183,6 +188,8 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    // previous turn drawing
     if ([segue.identifier isEqualToString:@"lastTurn"])
     {
         ViewLastTurnViewController *lastTurnVC = segue.destinationViewController;
@@ -204,6 +211,7 @@
     NSString *phrase = self.typingTextView.text;
     [self.model populateContentsArrayWithPhrase:phrase];
 }
+
 - (IBAction)viewLastTurnPressed:(id)sender {
 }
 
