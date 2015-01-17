@@ -87,7 +87,7 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    self.colorView.backgroundColor = self.pageColor;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -101,7 +101,6 @@
     label.text = [NSString stringWithFormat:@"%ld", (long)value];
     
     self.pageColor = [UIColor colorWithRed:_redValue/255.0 green:_greenValue/255.0 blue:_blueValue/255.0 alpha:1.0];
-    self.colorView.backgroundColor = self.pageColor;
 }
 
 - (IBAction)cancelPressed:(id)sender {
