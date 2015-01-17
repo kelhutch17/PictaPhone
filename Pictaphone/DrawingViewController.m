@@ -24,6 +24,10 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControlOutlet;
 - (IBAction)segmentControlPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *undoButton;
+- (IBAction)undoButtonPressed:(id)sender;
+
+
 @property (strong, nonatomic) IBOutlet UIView *drawingView;
 @property (nonatomic, assign) CGRect drawingViewFrame;
 
@@ -491,4 +495,6 @@ CGPoint currentPoint;
 - (IBAction)viewLastTurnPressed:(id)sender {
 }
 
+- (IBAction)undoButtonPressed:(id)sender {
+}
 @end

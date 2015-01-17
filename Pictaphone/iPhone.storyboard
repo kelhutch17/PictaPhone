@@ -316,7 +316,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view multipleTouchEnabled="YES" contentMode="scaleToFill" id="y8V-lQ-xnQ">
-                                <rect key="frame" x="20" y="132" width="280" height="331"/>
+                                <rect key="frame" x="20" y="132" width="280" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -365,17 +365,6 @@
                                     <segue destination="xsE-nR-N61" kind="modal" identifier="confirmErase" id="LXf-HD-zaA"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="U7D-RB-FcD">
-                                <rect key="frame" x="76" y="471" width="169" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="Draw"/>
-                                    <segment title="Erase"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentControlPressed:" destination="4EJ-cw-t4E" eventType="valueChanged" id="acU-fh-hTO"/>
-                                </connections>
-                            </segmentedControl>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z8r-P4-0bM">
                                 <rect key="frame" x="192" y="95" width="108" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -394,13 +383,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow3.png" id="a9K-cI-UfQ">
-                                <rect key="frame" x="90" y="63" width="94" height="57"/>
+                                <rect key="frame" x="90" y="55" width="94" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Here!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n69-XN-cVC">
-                                <rect key="frame" x="101" y="81" width="85" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n69-XN-cVC">
+                                <rect key="frame" x="110" y="80" width="55" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -430,6 +419,28 @@
                                     <segue destination="ryd-BO-R9E" kind="push" id="MdP-CY-IZR"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="U7D-RB-FcD">
+                                <rect key="frame" x="135" y="445" width="169" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Draw"/>
+                                    <segment title="Erase"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlPressed:" destination="4EJ-cw-t4E" eventType="valueChanged" id="acU-fh-hTO"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O8h-gz-unu">
+                                <rect key="frame" x="17" y="437" width="70" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="22"/>
+                                <state key="normal" title="Undo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoButtonPressed:" destination="4EJ-cw-t4E" eventType="touchUpInside" id="gM9-56-Jw8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.58533960460000001" green="0.42559228269999999" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                     </view>
@@ -443,6 +454,7 @@
                         <outlet property="playerLabel" destination="Z8r-P4-0bM" id="YMb-y5-syr"/>
                         <outlet property="roundLabel" destination="dnX-FS-K9Z" id="XTv-fd-0gO"/>
                         <outlet property="segmentedControlOutlet" destination="U7D-RB-FcD" id="J5b-zH-UBe"/>
+                        <outlet property="undoButton" destination="O8h-gz-unu" id="pCg-bk-mIP"/>
                         <outlet property="viewLastTurnButton" destination="zrn-Iy-hPF" id="tih-aG-9oo"/>
                     </connections>
                 </viewController>
@@ -501,16 +513,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow3.png" id="Et1-f9-xDJ">
-                                <rect key="frame" x="81" y="58" width="119" height="70"/>
+                                <rect key="frame" x="81" y="53" width="119" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Here!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mn4-B4-slN">
-                                <rect key="frame" x="98" y="82" width="85" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Egh-41-5Rd">
                                 <rect key="frame" x="40" y="20" width="241" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -544,6 +549,13 @@
                                     <segue destination="4EJ-cw-t4E" kind="push" id="qXY-qo-31n"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mn4-B4-slN">
+                                <rect key="frame" x="114" y="79" width="53" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.58533960460000001" green="0.42559228269999999" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                     </view>
@@ -895,9 +907,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="DZD-v1-OF3"/>
-        <segue reference="8Rj-Rk-cYy"/>
         <segue reference="qXY-qo-31n"/>
+        <segue reference="RW8-w2-dEm"/>
         <segue reference="RTo-N1-5oL"/>
+        <segue reference="MdP-CY-IZR"/>
     </inferredMetricsTieBreakers>
 </document>
