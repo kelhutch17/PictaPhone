@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Game_Modes</key>
+	<dict>
+		<key>single</key>
+		<dict>
+			<key>title</key>
+			<string>Single Device Mode</string>
+			<key>description</key>
+			<string>Use one device that each player takes turns using to play the game</string>
+		</dict>
+		<key>multi</key>
+		<dict>
+			<key>title</key>
+			<string>Multi-Device Mode</string>
+			<key>description</key>
+			<string>Connect up to 4 devices via bluetooth or wifi and play across multiple devices</string>
+		</dict>
+	</dict>
+	<key>Instructions</key>
+	<array>
+		<dict>
+			<key>Title</key>
+			<string>Select Game Mode</string>
+			<key>Line One</key>
+			<string>Single Device Mode only requires one device</string>
+			<key>Line Two</key>
+			<string>Multi-Device Mode requires multiple devices (up to 4) connected over a wifi or bluetooth connection.</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Game Setup</string>
+			<key>Line One</key>
+			<string>Select the number of players. Select the number of rounds (every player gets one turn per round). </string>
+			<key>Line Two</key>
+			<string>Select whether you want the first player to draw a picture or type a phrase. Select if you want the first picture/phrase to be auto-generated.</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Game Play</string>
+			<key>Line One</key>
+			<string>After the game is setup, the first player will either draw a picture or type a phrase (depending on what was selected in setup). </string>
+			<key>Line Two</key>
+			<string>Once the first player finishes, they press &quot;Done&quot; and the next player will take their turn. If you are in single device mode, pass the device to the next player.</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Game Play (continued)</string>
+			<key>Line One</key>
+			<string>The next player will be able to see only the previous player&apos;s drawing/phrase and will either draw or type during their turn. </string>
+			<key>Line Two</key>
+			<string>What the next player draws/types should describe what the previous player drew/wrote. When he or she is finished, press &quot;Done&quot;.</string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>Game Play (continued)</string>
+			<key>Line One</key>
+			<string>Continue play until all the rounds are completed</string>
+			<key>Line Two</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Title</key>
+			<string>View Your Story</string>
+			<key>Line One</key>
+			<string>When all rounds are completed, scroll through the different images and phrases to see the story you created!</string>
+			<key>Line Two</key>
+			<string></string>
+		</dict>
+	</array>
+	<key>Random_Assets</key>
+	<dict>
+		<key>Phrases</key>
+		<array>
+			<string>The black cat slid down the yellow slide</string>
+			<string>The obese man ate 4 hamburgers all at once</string>
+			<string>Marcia is a stay at home mom with many children</string>
+			<string>The bacon was burnt</string>
+			<string>My shorts were inside out all day and I didn&apos;t even know</string>
+			<string>Maria is an Italian woman who only eats spaghetti </string>
+			<string>I spilled all the bleach on the rug!</string>
+			<string>Carl the babysitter loves to take selfies</string>
+			<string>The school bus drove past my stop </string>
+			<string>I accidentally overslept this morning</string>
+			<string>Purple dragons eat kangaroos at tea time</string>
+			<string>A frustrated Windows user decides to buy a Macbook </string>
+			<string>Aliens abduct a poodle</string>
+			<string>Spilling apple juice on your laptop</string>
+			<string>Dropping your phone in the toilet</string>
+			<string>Jasmine falls off the magic carpet</string>
+			<string>My puppy tracked mud all over the kitchen floor</string>
+			<string>Doug ate an entire pizza in one sitting</string>
+			<string>Playing guitar on top of a car while stuck in a traffic jam</string>
+			<string>Feeding the cat glue</string>
+			<string>Microwaving a telephone </string>
+			<string>The teacher has a &quot;Kick Me&quot; sign on his back</string>
+			<string>Accidentally stapling your finger</string>
+			<string>A bowl of tomato soup</string>
+			<string>A dancing hippo</string>
+			<string>Double dutch gone wrong</string>
+			<string>Falling on the treadmill</string>
+			<string>My umbrella blows inside out</string>
+			<string>Raining apples and bananas</string>
+			<string>Mario and Sonic are best friends </string>
+			<string>Hair catches on fire</string>
+		</array>
+		<key>Images</key>
+		<array>
+			<string>doctor</string>
+			<string>psyduck</string>
+			<string>electrode</string>
+			<string>joker</string>
+			<string>BananaWarrior</string>
+			<string>sonic</string>
+			<string>cute_otter</string>
+			<string>kitty</string>
+			<string>george_clinton</string>
+			<string>adventure</string>
+			<string>flying_pikachu</string>
+			<string>homeless_santa</string>
+			<string>landscape</string>
+			<string>computer</string>
+			<string>ninja_turtle</string>
+			<string>tweety</string>
+			<string>hello_kitty</string>
+			<string>buzz</string>
+			<string>rex</string>
+			<string>wise_ole_tomato</string>
+			<string>kirby</string>
+			<string>spongebob</string>
+			<string>jason</string>
+			<string>shark_horse</string>
+			<string>freddi_the_fish</string>
+			<string>pig</string>
+			<string>whale</string>
+			<string>Frog</string>
+			<string>nyan_cat</string>
+			<string>gorilla</string>
+			<string>chrome</string>
+			<string>roller_coaster</string>
+			<string>sharkRace</string>
+			<string>random_guy</string>
+		</array>
+	</dict>
+</dict>
+</plist>
