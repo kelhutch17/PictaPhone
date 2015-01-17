@@ -20,7 +20,6 @@
 		6242FE261A09506E009AD23E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6242FE0E1A09506E009AD23E /* UIKit.framework */; };
 		6242FE2E1A09506E009AD23E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6242FE2C1A09506E009AD23E /* InfoPlist.strings */; };
 		6242FE301A09506E009AD23E /* PictaphoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6242FE2F1A09506E009AD23E /* PictaphoneTests.m */; };
-		6242FE3A1A095079009AD23E /* Pictaphone - App Definition Statement.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6242FE391A095079009AD23E /* Pictaphone - App Definition Statement.pdf */; };
 		6242FE3C1A0950B3009AD23E /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6242FE3B1A0950B3009AD23E /* iPhone.storyboard */; };
 		6242FE401A0950F8009AD23E /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6242FE3F1A0950F8009AD23E /* iPad.storyboard */; };
 		6245C03C1A0AC6E700CD66D1 /* post_it.png in Resources */ = {isa = PBXBuildFile; fileRef = 6245C03B1A0AC6E700CD66D1 /* post_it.png */; };
@@ -39,7 +38,6 @@
 		6245C0591A0B42B200CD66D1 /* KeyboardToolbar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6245C0581A0B42B200CD66D1 /* KeyboardToolbar.jpg */; };
 		6245C05D1A0B43E600CD66D1 /* example.png in Resources */ = {isa = PBXBuildFile; fileRef = 6245C05C1A0B43E600CD66D1 /* example.png */; };
 		6245C05F1A0D8C3300CD66D1 /* 8_bit_pencil.png in Resources */ = {isa = PBXBuildFile; fileRef = 6245C05E1A0D8C3300CD66D1 /* 8_bit_pencil.png */; };
-		6245C0611A0D908600CD66D1 /* Pictaphone_Proposal.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6245C0601A0D908600CD66D1 /* Pictaphone_Proposal.pdf */; };
 		62D154E51A3A1FFA0096727B /* ViewLastTurnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D154E41A3A1FFA0096727B /* ViewLastTurnViewController.m */; };
 		62D154F61A3BF83D0096727B /* sentences.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D154F51A3BF83D0096727B /* sentences.png */; };
 		62D154F81A3C130A0096727B /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 62D154F71A3C130A0096727B /* arrow.png */; };
@@ -124,7 +122,6 @@
 		6242FE2B1A09506E009AD23E /* PictaphoneTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PictaphoneTests-Info.plist"; sourceTree = "<group>"; };
 		6242FE2D1A09506E009AD23E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6242FE2F1A09506E009AD23E /* PictaphoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictaphoneTests.m; sourceTree = "<group>"; };
-		6242FE391A095079009AD23E /* Pictaphone - App Definition Statement.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Pictaphone - App Definition Statement.pdf"; sourceTree = "<group>"; };
 		6242FE3B1A0950B3009AD23E /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 		6242FE3F1A0950F8009AD23E /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		6245C03B1A0AC6E700CD66D1 /* post_it.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = post_it.png; sourceTree = "<group>"; };
@@ -144,7 +141,6 @@
 		6245C0581A0B42B200CD66D1 /* KeyboardToolbar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KeyboardToolbar.jpg; sourceTree = "<group>"; };
 		6245C05C1A0B43E600CD66D1 /* example.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = example.png; sourceTree = "<group>"; };
 		6245C05E1A0D8C3300CD66D1 /* 8_bit_pencil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8_bit_pencil.png; sourceTree = "<group>"; };
-		6245C0601A0D908600CD66D1 /* Pictaphone_Proposal.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Pictaphone_Proposal.pdf; sourceTree = "<group>"; };
 		62D154E41A3A1FFA0096727B /* ViewLastTurnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewLastTurnViewController.m; sourceTree = "<group>"; };
 		62D154E61A3A20040096727B /* ViewLastTurnViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewLastTurnViewController.h; sourceTree = "<group>"; };
 		62D154F51A3BF83D0096727B /* sentences.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sentences.png; sourceTree = "<group>"; };
@@ -238,8 +234,6 @@
 		6242FDFE1A09506E009AD23E = {
 			isa = PBXGroup;
 			children = (
-				6242FE391A095079009AD23E /* Pictaphone - App Definition Statement.pdf */,
-				6245C0601A0D908600CD66D1 /* Pictaphone_Proposal.pdf */,
 				6242FE101A09506E009AD23E /* Pictaphone */,
 				6242FE291A09506E009AD23E /* PictaphoneTests */,
 				6242FE091A09506E009AD23E /* Frameworks */,
@@ -528,7 +522,6 @@
 				6245C0471A0B03C200CD66D1 /* post_it_two.png in Resources */,
 				62D154F61A3BF83D0096727B /* sentences.png in Resources */,
 				62D1555D1A3CF6920096727B /* hello_kitty.jpg in Resources */,
-				6242FE3A1A095079009AD23E /* Pictaphone - App Definition Statement.pdf in Resources */,
 				62D155631A3CF6920096727B /* jason.jpg in Resources */,
 				62D155581A3CF6920096727B /* homeless_santa.jpg in Resources */,
 				62D155591A3CF6920096727B /* landscape.jpg in Resources */,
@@ -541,7 +534,6 @@
 				62D1555C1A3CF6920096727B /* tweety.jpg in Resources */,
 				6242FE151A09506E009AD23E /* InfoPlist.strings in Resources */,
 				62D1556C1A3CF6930096727B /* roller_coaster.jpg in Resources */,
-				6245C0611A0D908600CD66D1 /* Pictaphone_Proposal.pdf in Resources */,
 				6245C03C1A0AC6E700CD66D1 /* post_it.png in Resources */,
 				6245C0551A0B34BE00CD66D1 /* thin_marker.png in Resources */,
 				6245C04D1A0B276D00CD66D1 /* iphone_icon.png in Resources */,
