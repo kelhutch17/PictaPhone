@@ -7,21 +7,22 @@
 //
 
 #import "PenSettingsViewController.h"
+#import "HRColorPickerView.h"
+#import "HRBrightnessSlider.h"
 #import "model.h"
 
-#define THIN 5.0f
-#define MEDIUM 13.0f
-#define THICK 20.0f
+#define THIN 5
+#define MEDIUM 13
+#define THICK 20
 
 @interface PenSettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *colorView;
+@property (strong, nonatomic) HRColorPickerView *colorPickerView;
+
+
 - (IBAction)cancelPressed:(id)sender;
 - (IBAction)donePressed:(id)sender;
-
-@property CGFloat redValue;
-@property CGFloat greenValue;
-@property CGFloat blueValue;
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *thicknessSegmentOutlet;
 - (IBAction)thicknessChanged:(id)sender;
@@ -46,48 +47,59 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.view.opaque = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = @"PenSettings";
-    
-    // Get color components and initialize slider values and label values
-    CGFloat alpha;
-    CGFloat red,blue,green;
-    [self.pageColor getRed:&red green:&green blue:&blue alpha:&alpha];
-    _redValue = red*255.0;
-    _greenValue = green*255.0;
-    _blueValue = blue*255.0;
-    
-    // Set default thickness amount
-    self.thicknessSegmentOutlet.selectedSegmentIndex = 0;
+    [self initializeView];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    // Set the color wheel to the current value
     
+    [self initializePenSettings];
+}
+
+-(void)initializeView {
+    self.view.opaque = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    // Set pen width selected segment
+    self.title = @"PenSettings";
+    self.colorView.hidden = YES;
+    
+    // Get color components and initialize slider values and label values
+    if (!self.pageColor){
+        self.pageColor = [UIColor blackColor];
+    }
+    
+    // Set default thickness amount
+    self.thicknessSegmentOutlet.selectedSegmentIndex = 0;
+    
+}
+
+-(void)initializePenSettings {
+    // Color Picker
+    CGRect frame = self.colorView.frame;
+    self.colorPickerView = [[HRColorPickerView alloc] initWithFrame:frame];
+    self.colorPickerView.color = self.pageColor;
+    self.colorPickerView.brightnessSlider.brightnessLowerLimit = @0.0;
+    [self.colorPickerView addTarget:self
+                             action:@selector(colorChanged)
+                   forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:self.colorPickerView];
+    
+    // Pen Width
     NSInteger width = self.drawWidth;
     switch (width) {
-        case 5:
+        case THIN:
             self.thicknessSegmentOutlet.selectedSegmentIndex = 0;
             break;
-        case 13:
+        case MEDIUM:
             self.thicknessSegmentOutlet.selectedSegmentIndex = 1;
             break;
-        case 20:
+        case THICK:
             self.thicknessSegmentOutlet.selectedSegmentIndex = 2;
             break;
         default:
             break;
     }
-}
-
--(void)viewDidAppear:(BOOL)animated {
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,12 +108,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-// when any slider changes we update the controls & view
--(void)updateLabel:(UILabel*)label withValue:(NSInteger)value {
-    label.text = [NSString stringWithFormat:@"%ld", (long)value];
-    
-    self.pageColor = [UIColor colorWithRed:_redValue/255.0 green:_greenValue/255.0 blue:_blueValue/255.0 alpha:1.0];
-}
 
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -110,6 +116,10 @@
 - (IBAction)donePressed:(id)sender {
     self.drawWidthCompletionBlock(self.drawWidth);
      self.completionBlock(@{@"color":self.pageColor});
+}
+
+- (void)colorChanged {
+    self.pageColor = self.colorPickerView.color;
 }
 
 - (IBAction)thicknessChanged:(id)sender {

@@ -697,6 +697,7 @@
                         <color key="backgroundColor" red="0.58533960460000001" green="0.42559228269999999" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="3QU-K4-KgZ" id="8Ox-do-bqe"/>
                         <outlet property="thicknessSegmentOutlet" destination="YlR-gB-OeL" id="JbN-qm-D0s"/>
                     </connections>
                 </viewController>
