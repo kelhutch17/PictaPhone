@@ -895,6 +895,7 @@
                         <outlet property="autoGenerateFirstRoundIndicator" destination="UFT-U8-Ge5" id="Eb3-tX-3dn"/>
                         <outlet property="autoGenerateFirstRoundSwitch" destination="b9p-m0-TVx" id="N9B-qx-Iy3"/>
                         <outlet property="drawingPlayButton" destination="mjg-M2-HYP" id="Cgw-lS-1Kq"/>
+                        <outlet property="pictureOrWordsSegmentedControl" destination="v6y-X8-l62" id="eY8-MY-tTV"/>
                         <outlet property="playerCount" destination="fzs-Xs-dq0" id="nlx-p1-N9X"/>
                         <outlet property="playerCountStepper" destination="Apf-l2-Rzj" id="l17-C0-Se4"/>
                         <outlet property="roundCount" destination="vdm-V6-DC1" id="2gL-mQ-sbt"/>
@@ -981,9 +982,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="yEu-4s-qr3"/>
-        <segue reference="30I-IJ-cu7"/>
-        <segue reference="PVG-TC-Rsz"/>
         <segue reference="mpa-Oi-dz8"/>
+        <segue reference="qxu-9b-dMG"/>
+        <segue reference="VzJ-yD-L90"/>
+        <segue reference="PVG-TC-Rsz"/>
     </inferredMetricsTieBreakers>
 </document>
