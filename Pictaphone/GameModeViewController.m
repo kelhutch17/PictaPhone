@@ -51,6 +51,8 @@
         self.device = @"iPad";
     }
     
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     

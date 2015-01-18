@@ -62,9 +62,6 @@
         self.lastImage.image = self.imageToDisplay;
         self.lastImage.userInteractionEnabled = NO;
         self.lastImage.contentMode = UIViewContentModeScaleAspectFit;
-        
-        self.lastImage.layer.borderWidth = 5.0f;
-        self.lastImage.layer.borderColor = [[UIColor grayColor] CGColor];
     }
     else if([self.contentToDisplay isEqual:@"phrase"]) {
         self.lastPhrase.hidden = NO;
@@ -72,9 +69,6 @@
         self.lastPhrase.text = self.phraseToDisplay;
         self.lastPhrase.userInteractionEnabled = NO;
         self.lastPhrase.font = [UIFont fontWithName:@"Tamil Sangam MN" size:22.0];
-        
-        self.lastPhrase.layer.borderWidth = 5.0f;
-        self.lastPhrase.layer.borderColor = [[UIColor grayColor] CGColor];
         
         self.lastPhrase.textAlignment = NSTextAlignmentCenter;
     }

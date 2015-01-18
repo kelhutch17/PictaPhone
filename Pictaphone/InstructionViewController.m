@@ -61,6 +61,8 @@
 {
     [super viewDidLoad];
     
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     // Do any additional setup after loading the view.
     [self initializeScrollView];
     [self loadScrollViewPages];

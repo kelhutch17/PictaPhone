@@ -60,6 +60,8 @@
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
     // Determine which game mode we are running in (single or multi)
     self.currentGameMode = self.gameMode;
     
