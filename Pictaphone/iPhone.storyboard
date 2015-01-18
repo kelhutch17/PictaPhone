@@ -13,12 +13,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_it.png" id="E0f-aK-XGe">
+                                <rect key="frame" x="39" y="167" width="243" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="8_bit_pencil.png" id="hLM-dw-zqk">
-                                <rect key="frame" x="113" y="311" width="112" height="91"/>
+                                <rect key="frame" x="113" y="302" width="112" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="The Social Drawing Game of Interpretation!" textAlignment="center" selectable="NO" id="uu3-Vt-EWD">
-                                <rect key="frame" x="63" y="234" width="213" height="118"/>
+                                <rect key="frame" x="63" y="230" width="213" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -36,11 +40,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="CGF-u4-Sfh" kind="push" id="NV8-XQ-RlQ"/>
                                         </connections>
@@ -54,11 +53,6 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="ixP-CJ-JV9" kind="push" id="mN7-YK-HyT"/>
                                         </connections>
@@ -67,11 +61,7 @@
                                 <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleimage.png" id="v8c-Vk-fXa">
-                                <rect key="frame" x="11" y="91" width="298" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="post_it.png" id="E0f-aK-XGe">
-                                <rect key="frame" x="39" y="167" width="243" height="285"/>
+                                <rect key="frame" x="11" y="70" width="298" height="89"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -79,6 +69,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="L9n-hP-3mL"/>
                     <connections>
+                        <outlet property="btnInstructions" destination="LQ3-le-3Od" id="o0C-GI-LtI"/>
+                        <outlet property="btnPlay" destination="DdR-Mq-xT4" id="ICE-J6-3wd"/>
                         <outlet property="imgPencilLogo" destination="hLM-dw-zqk" id="ZXa-zJ-y8b"/>
                         <outlet property="lblDescriptionText" destination="uu3-Vt-EWD" id="ySS-6S-sdu"/>
                     </connections>
@@ -126,11 +118,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="i6l-h2-Wgf" kind="push" identifier="pushSegue" id="RMA-ff-Slo"/>
                                 </connections>
@@ -155,6 +142,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="knm-B6-AcZ"/>
                     <connections>
+                        <outlet property="btnNext" destination="G7K-EM-y2Z" id="rj0-Jh-kba"/>
                         <outlet property="deviceModeDescription" destination="SDO-RP-l7M" id="cY0-Yy-n4G"/>
                         <outlet property="deviceModeLabel" destination="Nan-9o-acK" id="5Zi-Dx-42f"/>
                         <outlet property="deviceModeSegmentedControl" destination="6Eo-tS-Ee9" id="Kvy-4J-aFI"/>
@@ -284,11 +272,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="playButtonPressed:" destination="i6l-h2-Wgf" eventType="touchUpInside" id="ocX-qg-XAp"/>
                                     <segue destination="4EJ-cw-t4E" kind="push" identifier="drawingSegue" id="bTb-Ij-GY2"/>
@@ -301,6 +284,7 @@
                     <connections>
                         <outlet property="autoGenerateFirstRoundIndicator" destination="oOL-W7-xG9" id="5bB-AM-7vF"/>
                         <outlet property="autoGenerateFirstRoundSwitch" destination="kBq-vt-DHW" id="Zjb-Fo-LhD"/>
+                        <outlet property="btnPlay" destination="4vE-zG-Rki" id="4kC-Fi-oa7"/>
                         <outlet property="drawingPlayButton" destination="4vE-zG-Rki" id="PJR-1C-PMp"/>
                         <outlet property="pictureOrWordsSegmentedControl" destination="0wD-WV-jsR" id="5mS-Bx-lvP"/>
                         <outlet property="playerCount" destination="3PM-XL-KUK" id="qda-mH-7vx"/>

@@ -39,6 +39,7 @@
 - (IBAction)playButtonPressed:(id)sender;
 @property (weak, nonatomic) IBOutlet UIButton *drawingPlayButton;
 @property (weak, nonatomic) IBOutlet UIButton *typingPlayButton;
+@property (weak, nonatomic) IBOutlet UIButton *btnPlay;
 
 @end
 
@@ -60,6 +61,25 @@
     // Do any additional setup after loading the view.
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Define a custom green
+    // TODO: globally declare the custom colors so that we can use them everywhere programmatically
+    
+    // TODO: Replace constants
+    UIColor *green1 = [UIColor colorWithRed:(80.0/255.0) green:(140.0/255.0) blue:(40.0/255.0) alpha:1.0];
+    UIColor *green2 = [UIColor colorWithRed:(111.0/255.0) green:(178.0/255.0) blue:(31.0/255.0) alpha:1.0];
+    
+    
+    // Apply borders to the buttons using quartz
+    self.btnPlay.layer.borderWidth=3.0f;
+    self.btnPlay.layer.borderColor=[green1 CGColor];
+    self.btnPlay.layer.backgroundColor=[green2 CGColor];
+    self.btnPlay.layer.cornerRadius=5;
+    self.btnPlay.titleLabel.font=[UIFont fontWithName:@"Helvetica Bold" size:20.0];
+    
+    self.playerCountStepper.tintColor=green1;
+    self.roundCountStepper.tintColor=green1;
+    self.pictureOrWordsSegmentedControl.tintColor=green1;
     
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
