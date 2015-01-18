@@ -31,9 +31,11 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"random_grey_variations.png"]]];
     self.lblDescriptionText.transform = CGAffineTransformMakeRotation(357 * M_PI / 180.0);
-
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 -(void) viewDidAppear:(BOOL)animated

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Pql-1G-dBR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="Pql-1G-dBR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -332,7 +332,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="TCb-OY-uQv" eventType="touchUpInside" id="vSf-Fi-yg9"/>
-                                    <segue destination="tPJ-j7-yk7" kind="custom" customClass="KMHCustomSegue" id="30I-IJ-cu7"/>
+                                    <segue destination="tPJ-j7-yk7" kind="push" id="30I-IJ-cu7"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="interactive" textAlignment="center" id="2Dt-Iv-ydN">
@@ -374,7 +374,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="endOfGameButtonPressed:" destination="TCb-OY-uQv" eventType="touchUpInside" id="ib5-K2-gef"/>
-                                    <segue destination="gsf-8D-syQ" kind="custom" customClass="KMHCustomSegue" id="bri-AH-qvq"/>
+                                    <segue destination="gsf-8D-syQ" kind="push" id="bri-AH-qvq"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow3.png" id="atP-ph-QkB">
@@ -404,6 +404,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Wvi-ff-nXN"/>
                     <connections>
                         <outlet property="clickHereArrow" destination="atP-ph-QkB" id="vCT-eK-GEs"/>
                         <outlet property="clickHereLabel" destination="b5T-CA-8hO" id="tIl-qE-WgX"/>
@@ -469,7 +470,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="endOfRoundPressed:" destination="tPJ-j7-yk7" eventType="touchUpInside" id="HCV-QB-JMK"/>
-                                    <segue destination="gsf-8D-syQ" kind="custom" customClass="KMHCustomSegue" id="mpa-Oi-dz8"/>
+                                    <segue destination="gsf-8D-syQ" kind="push" id="mpa-Oi-dz8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="ZmX-rU-fE3">
@@ -504,7 +505,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="doneButtonPressed:" destination="tPJ-j7-yk7" eventType="touchUpInside" id="7OL-YR-CEm"/>
-                                    <segue destination="TCb-OY-uQv" kind="custom" customClass="KMHCustomSegue" id="yEu-4s-qr3"/>
+                                    <segue destination="TCb-OY-uQv" kind="push" id="yEu-4s-qr3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Here!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EBu-WT-OTj">
@@ -542,9 +543,20 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JHQ-5g-0tA">
+                                <rect key="frame" x="47" y="835" width="84" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Undo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="undoButtonPressed:" destination="tPJ-j7-yk7" eventType="touchUpInside" id="HJ4-bn-4Vh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="xfC-yc-Qv8"/>
                     <connections>
                         <outlet property="clickHereArrow" destination="811-PK-Jpi" id="Epn-8a-RGY"/>
                         <outlet property="clickHereLabel" destination="EBu-WT-OTj" id="OQg-Qb-5r4"/>
@@ -554,6 +566,7 @@
                         <outlet property="playerLabel" destination="ihy-fG-mA0" id="Evb-jq-Vzf"/>
                         <outlet property="roundLabel" destination="ZmX-rU-fE3" id="mCN-wx-ZSM"/>
                         <outlet property="segmentedControlOutlet" destination="yGG-5h-ZXn" id="KUE-gC-Yl7"/>
+                        <outlet property="undoButton" destination="JHQ-5g-0tA" id="bDW-Kr-Udl"/>
                         <outlet property="viewLastTurnButton" destination="T8m-vq-MtG" id="cmP-zN-uae"/>
                     </connections>
                 </viewController>
@@ -702,7 +715,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startOverPressed:" destination="gsf-8D-syQ" eventType="touchUpInside" id="kaE-39-T1w"/>
-                                    <segue destination="Pql-1G-dBR" kind="custom" customClass="KMHCustomSegue" id="4Jk-MS-9la"/>
                                 </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="7" id="Z3T-Xb-YTz">
@@ -737,6 +749,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="krZ-5m-Iew"/>
                     <connections>
                         <outlet property="currentImage" destination="ela-mQ-MB2" id="NjM-tJ-haz"/>
                         <outlet property="currentPhrase" destination="SQt-le-x1K" id="vXu-y8-Fi0"/>
@@ -832,7 +845,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="tPJ-j7-yk7" kind="custom" identifier="startDrawing" customClass="KMHCustomSegue" id="qxu-9b-dMG"/>
+                                    <segue destination="tPJ-j7-yk7" kind="push" identifier="startDrawing" id="qxu-9b-dMG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="fzs-Xs-dq0">
@@ -864,7 +877,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="TCb-OY-uQv" kind="custom" identifier="startTyping" customClass="KMHCustomSegue" id="VzJ-yD-L90"/>
+                                    <segue destination="TCb-OY-uQv" kind="push" identifier="startTyping" id="VzJ-yD-L90"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="b9p-m0-TVx">
@@ -882,6 +895,7 @@
                         <outlet property="autoGenerateFirstRoundIndicator" destination="UFT-U8-Ge5" id="Eb3-tX-3dn"/>
                         <outlet property="autoGenerateFirstRoundSwitch" destination="b9p-m0-TVx" id="N9B-qx-Iy3"/>
                         <outlet property="drawingPlayButton" destination="mjg-M2-HYP" id="Cgw-lS-1Kq"/>
+                        <outlet property="pictureOrWordsSegmentedControl" destination="v6y-X8-l62" id="eY8-MY-tTV"/>
                         <outlet property="playerCount" destination="fzs-Xs-dq0" id="nlx-p1-N9X"/>
                         <outlet property="playerCountStepper" destination="Apf-l2-Rzj" id="l17-C0-Se4"/>
                         <outlet property="roundCount" destination="vdm-V6-DC1" id="2gL-mQ-sbt"/>
@@ -968,9 +982,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="mpa-Oi-dz8"/>
         <segue reference="qxu-9b-dMG"/>
-        <segue reference="bri-AH-qvq"/>
         <segue reference="VzJ-yD-L90"/>
-        <segue reference="xKv-Tx-siB"/>
+        <segue reference="PVG-TC-Rsz"/>
     </inferredMetricsTieBreakers>
 </document>

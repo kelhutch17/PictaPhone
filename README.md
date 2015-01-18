@@ -1,5 +1,5 @@
 # PictaPhone
-The social game of drawing interpretation
+The social drawing game of interpretation
 
 Originally built as part of a PSU CMPSC475 project by Kelly Hutchison
 
