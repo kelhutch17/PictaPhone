@@ -981,9 +981,9 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="30I-IJ-cu7"/>
         <segue reference="yEu-4s-qr3"/>
-        <segue reference="xKv-Tx-siB"/>
-        <segue reference="bri-AH-qvq"/>
+        <segue reference="30I-IJ-cu7"/>
+        <segue reference="PVG-TC-Rsz"/>
+        <segue reference="mpa-Oi-dz8"/>
     </inferredMetricsTieBreakers>
 </document>
