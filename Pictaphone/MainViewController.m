@@ -30,6 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor colorWithRed:255 green:239 blue:100 alpha:0.96]];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 -(void) viewDidAppear:(BOOL)animated
