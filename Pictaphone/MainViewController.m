@@ -10,6 +10,8 @@
 #import "model.h"
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *lblDescriptionText;
+@property (weak, nonatomic) IBOutlet UIImageView *imgPencilLogo;
 @property (nonatomic,strong) model *model;
 @end
 
@@ -29,7 +31,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor colorWithRed:255 green:239 blue:100 alpha:0.96]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"random_grey_variations.png"]]];
+    self.lblDescriptionText.transform = CGAffineTransformMakeRotation(357 * M_PI / 180.0);
+
 }
 
 -(void) viewDidAppear:(BOOL)animated
