@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *deviceModeDescription;
 @property (weak, nonatomic) IBOutlet UIImageView *singleDeviceModeImage;
 @property (weak, nonatomic) IBOutlet UIImageView *multiDeviceModeImage;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
 
 
 @end
@@ -55,6 +56,21 @@
     
     self.view.opaque = YES;
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    // Define a custom green
+    // TODO: globally declare the custom colors so that we can use them everywhere programmatically
+    
+    // TODO: Replace constants
+    UIColor *green1 = [UIColor colorWithRed:(80.0/255.0) green:(140.0/255.0) blue:(40.0/255.0) alpha:1.0];
+    UIColor *green2 = [UIColor colorWithRed:(111.0/255.0) green:(178.0/255.0) blue:(31.0/255.0) alpha:1.0];
+    
+    // Format the buttons in a uniform way
+    // Apply borders to the buttons using quartz
+    self.btnNext.layer.borderWidth=3.0f;
+    self.btnNext.layer.borderColor=[green1 CGColor];
+    self.btnNext.layer.backgroundColor=[green2 CGColor];
+    self.btnNext.layer.cornerRadius=5;
+    self.btnNext.titleLabel.font=[UIFont fontWithName:@"Helvetica Bold" size:20.0];
     
     [self setupSegmentedControl];
     [self initializeGameModeAssets];

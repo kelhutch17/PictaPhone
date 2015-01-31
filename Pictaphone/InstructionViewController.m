@@ -67,8 +67,8 @@
     [self initializeScrollView];
     [self loadScrollViewPages];
     
-    self.view.opaque = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
+    // Apply a nice background to the view
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"random_grey_variations.png"]]];
     
     self.postItNoteXOffset = self.scrollView.frame.origin.x;
     self.postItNoteYOffset = self.scrollView.frame.origin.y;
